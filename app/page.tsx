@@ -1,15 +1,11 @@
-﻿import RecipeCard from "./components/RecipeCard";
+﻿import RecipeGrid from "./components/RecipeGrid";
 import { recipes } from "./data/recipes";
 
 export default function Home() {
   return (
     <main>
       <h1>Find your next bite.</h1>
-      <div className="grid">
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.id} recipe={recipe} />
-        ))}
-      </div>
+      <RecipeGrid recipes={recipes} />
     </main>
   );
 }
