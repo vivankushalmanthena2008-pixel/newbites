@@ -1,7 +1,7 @@
 ﻿const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/nextbites" : "",
+  basePath: isProd ? "/newbites" : "",
   images: { unoptimized: true },
   trailingSlash: true,
 };
