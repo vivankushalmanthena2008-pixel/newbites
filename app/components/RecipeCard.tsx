@@ -1,0 +1,16 @@
+﻿import Link from "next/link";
+import type { Recipe } from "../data/recipes";
+
+export default function RecipeCard({ recipe }: { recipe: Recipe }) {
+  return (
+    <Link href={`/recipe/${recipe.id}`} className="card">
+      <div className="card-art">{recipe.emoji}</div>
+      <h3>{recipe.title}</h3>
+      <div className="card-meta">
+        <span>{"\u23F1\uFE0F"}{recipe.minutes} min</span>
+        <span>{recipe.difficulty}</span>
+        <span>{recipe.cuisine}</span>
+      </div>
+    </Link>
+  );
+}
